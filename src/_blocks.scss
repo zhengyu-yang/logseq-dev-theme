@@ -1,8 +1,13 @@
-@import "bullet_threading.scss";
+/* @import "bullet_threading.scss"; */
 
 :root {
   --ct-bullet-size: 6px;
   --ct-block-max-width: calc(100% - 38px);
+  --ct-bullet-color: #4d4d4d;
+  --ct-bullet-closed-color: #8e8e8e;
+  --ct-guideline-color: #cacaca;
+  --ct-guideline-size: 1px;
+  --ct-guideline-style: solid;
 }
 
 /* block reference */
@@ -64,13 +69,52 @@ a:hover > .bullet-container .bullet {
   opacity: 1;
 }
 
+/* ======================================= */
+/* from bullet_threading.scss              */
+/* remove drifting of blocks               */
+.ls-block div.items-center {
+  position: relative;
+  height: 26px !important;
+}
+/* ======================================= */
+
+/* ======================================= */
+/* from logseq-laurel-theme                */
+/* vertical lines and bullets highlights   */
+.block-children {
+  border-left: var(--ct-guideline-size) var(--ct-guideline-style)
+    var(--ct-guideline-color);
+}
+
+.block-children:focus-within {
+  border-color: var(--ct-page-reference-color);
+}
+
+/*=============================================================================================================================
+==== highlight current path by cannnibalox v0.2 https://discuss.logseq.com/t/css-highlights-current-path-bullets-color/371 ====
+=============================================================================================================================*/
+.ls-block .bullet {
+  background-color: var(--ct-page-reference-color);
+  box-shadow: 0 0 0 2px var(--ct-background),
+    0 0 0 3px var(--ct-page-reference-color);
+}
+
+.ls-block:not(:focus-within) .bullet {
+  background-color: var(--ct-bullet-color);
+  box-shadow: none;
+}
+/* ======================================= */
+
 .block-control svg {
   color: var(--ct-block-arrow-color);
 }
 
+/* remove the shadow of the block controller */
+/*
 .block-control:hover svg {
   filter: drop-shadow(2px 4px 6px black);
 }
+*/
 
 .block-control .rotating-arrow {
   display: block;

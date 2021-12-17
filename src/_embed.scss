@@ -10,10 +10,13 @@
   transition: all ease-in 0.3s;
 }
 
+/* remove animation of embedding blocks */
+/*
 :is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
   box-shadow: 8px 8px rgba(0, 0, 0);
   transform: translate(-7px, -6px);
 }
+*/
 
 /* page embed */
 .embed-page,
