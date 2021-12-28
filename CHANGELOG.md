@@ -1,3 +1,31 @@
+## [1.23.1](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.0...v1.23.1) (2021-12-26)
+
+
+### Bug Fixes
+
+* block toggle rounded border ([60b3783](https://github.com/pengx17/logseq-dev-theme/commit/60b3783971d64437fe15baf6e7165e40a337bae4))
+
+# [1.23.0](https://github.com/pengx17/logseq-dev-theme/compare/v1.22.7...v1.23.0) (2021-12-26)
+
+
+### Features
+
+* update block-ref style ([6c177a3](https://github.com/pengx17/logseq-dev-theme/commit/6c177a3c36df5302200b2be8ff7d97aa5cac67d0))
+
+## [1.22.7](https://github.com/pengx17/logseq-dev-theme/compare/v1.22.6...v1.22.7) (2021-12-26)
+
+
+### Bug Fixes
+
+* adapt for new block toggle styles ([1427d05](https://github.com/pengx17/logseq-dev-theme/commit/1427d05ad957b98cdec89325ee125a7d99c6657a))
+
+## [1.22.6](https://github.com/pengx17/logseq-dev-theme/compare/v1.22.5...v1.22.6) (2021-12-24)
+
+
+### Bug Fixes
+
+* update colors ([291a4ac](https://github.com/pengx17/logseq-dev-theme/commit/291a4ac9904d282c3abc65758e971b150bbd622f))
+
 ## [1.22.5](https://github.com/pengx17/logseq-dev-theme/compare/v1.22.4...v1.22.5) (2021-12-22)
 
 
