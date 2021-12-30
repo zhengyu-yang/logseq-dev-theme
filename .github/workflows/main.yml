@@ -22,7 +22,7 @@ jobs:
         run: yarn install
       - name: Build theme
         run: yarn build
-      # - name: Release
-      #   run: npx semantic-release
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
