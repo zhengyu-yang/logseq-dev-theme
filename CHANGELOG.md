@@ -1,3 +1,21 @@
+# [1.23.0](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.22.2...v1.23.0) (2021-12-30)
+
+
+### Bug Fixes
+
+* [#24](https://github.com/zhengyu-yang/logseq-dev-theme/issues/24) not be able to scroll horizontally ([b093433](https://github.com/zhengyu-yang/logseq-dev-theme/commit/b0934330168cfc1d7783d6a52b355ec9107c9920))
+* adapt for new block toggle styles ([1427d05](https://github.com/zhengyu-yang/logseq-dev-theme/commit/1427d05ad957b98cdec89325ee125a7d99c6657a))
+* block toggle rounded border ([60b3783](https://github.com/zhengyu-yang/logseq-dev-theme/commit/60b3783971d64437fe15baf6e7165e40a337bae4))
+* calc & lang indicator styles ([6d78f4b](https://github.com/zhengyu-yang/logseq-dev-theme/commit/6d78f4b799419c0ff1de6079769e646b170f0085))
+* prepare for standalone plugin ([ae0a327](https://github.com/zhengyu-yang/logseq-dev-theme/commit/ae0a327584e2470b4aaaae26fb3eda37530cfe65))
+* update colors ([291a4ac](https://github.com/zhengyu-yang/logseq-dev-theme/commit/291a4ac9904d282c3abc65758e971b150bbd622f))
+* update dark mode selection color ([0d9b59b](https://github.com/zhengyu-yang/logseq-dev-theme/commit/0d9b59b866427205f7aa07ece1ff32329ed4e207))
+
+
+### Features
+
+* update block-ref style ([6c177a3](https://github.com/zhengyu-yang/logseq-dev-theme/commit/6c177a3c36df5302200b2be8ff7d97aa5cac67d0))
+
 ## [1.23.2](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.1...v1.23.2) (2021-12-30)
 
 
