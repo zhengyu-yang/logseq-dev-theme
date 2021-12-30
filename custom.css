@@ -395,6 +395,7 @@ a.title h1.title {
   --ct-guideline-color: #cacaca;
   --ct-guideline-size: 1px;
   --ct-guideline-style: solid;
+  --ls-block-bullet-active-color: var(--ls-link-text-color);
 }
 
 /* block reference */
@@ -474,6 +475,10 @@ a:hover > .bullet-container .bullet {
 .ls-block:not(:focus-within) .bullet {
   background-color: var(--ct-bullet-color);
   box-shadow: none;
+}
+
+.block-children-container {
+  position: relative;
 }
 
 .block-children-left-border {

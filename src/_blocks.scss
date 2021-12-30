@@ -8,6 +8,7 @@
   --ct-guideline-color: #cacaca;
   --ct-guideline-size: 1px;
   --ct-guideline-style: solid;
+  --ls-block-bullet-active-color: var(--ls-link-text-color);
 }
 
 /* block reference */
@@ -92,6 +93,10 @@ a:hover > .bullet-container .bullet {
 }
 
 // block toggle rounded border, adapt for new block toggle styles in upstream, see logseq/logseq#3559 (1427d05)
+.block-children-container {
+  position: relative;
+}
+
 .block-children-left-border {
   z-index: 10;
   position: absolute;
