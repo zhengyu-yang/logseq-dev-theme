@@ -1,3 +1,10 @@
+## [1.23.1](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.0...v1.23.1) (2021-12-31)
+
+
+### Bug Fixes
+
+* incorrect color theme ([91f8b37](https://github.com/zhengyu-yang/logseq-dev-theme/commit/91f8b37a0ac0be9594627fb0780b2aaf2f99eb88))
+
 ## [1.23.3](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.2...v1.23.3) (2021-12-30)
 
 
