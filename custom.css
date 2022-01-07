@@ -386,131 +386,16 @@ a.title h1.title {
   content: "h5";
 }
 
-:root {
-  --ls-block-bullet-active-color: var(--ls-link-text-color);
-  --ls-block-bullet-threading-width: var(--ls-block-bullet-threading-width-overwrite, 1px);
-}
-
-.block-control {
-  z-index: 1;
-}
-
-.block-children {
-  border-left-color: var(--ls-guideline-color);
-  border-left-width: var(--ls-block-bullet-threading-width) !important;
-}
-
-.block-children-container {
-  position: relative;
-}
-
-.block-children-left-border {
-  z-index: 1;
-  position: absolute;
-  height: 100%;
-  width: 4px;
-  padding-right: 0px;
-  border-radius: 2px;
-  background-color: transparent;
-  left: -1px;
-  transition: background-color 0.2s;
-}
-
-.block-children-left-border:hover {
-  background-color: var(--ls-block-bullet-active-color);
-}
-
-.block-content-wrapper {
-  position: relative;
-}
-
-.bullet-container {
-  height: 14px !important;
-  width: 14px !important;
-  position: relative;
-  transform: translate(1px, -1px);
-}
-
-/* Block bullet path should only show in a nested block */
-.ls-block {
-  /* Fix for headings like h1, h2 etc */
-  /* Basic "curve" */
-  /* Fix multi-line blocks with children */
-}
-.ls-block .bullet {
-  background-color: var(--ls-block-bullet-active-color);
-  box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
-}
-.ls-block div.items-center {
-  position: relative;
-  height: 26px !important;
-}
-.ls-block > .items-baseline {
-  align-items: initial;
-}
-.ls-block:not(:focus-within) .bullet {
-  background-color: var(--ls-block-bullet-color);
-  transform: scale(1);
-  box-shadow: none;
-}
-.ls-block:not(:focus-within) > .items-baseline {
-  align-items: baseline;
-}
-.ls-block .ls-block > div > div.items-center::before {
-  pointer-events: none;
-  content: "";
-  left: calc(var(--ls-block-bullet-threading-width) * -1);
-  right: 6px;
-  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
-  bottom: 50%;
-  /* shift left 1px for border */
-  position: absolute;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-  border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
-  border-bottom-left-radius: 10px;
-}
-.ls-block .ls-block:focus-within > div > div.items-center::before {
-  border-color: var(--ls-block-bullet-active-color);
-}
-.ls-block .block-children > .ls-block::before {
-  pointer-events: none;
-  content: "";
-  top: -1rem;
-  bottom: 0;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-  left: calc(var(--ls-block-bullet-threading-width) * -1);
-  position: absolute;
-}
-.ls-block .block-children:focus-within > .ls-block:not(:focus-within)::before {
-  border-color: var(--ls-block-bullet-active-color);
-}
-.ls-block .block-children:focus-within > .ls-block:focus-within ~ .ls-block::before {
-  border-color: transparent;
-}
-.ls-block[haschild=true] > div > .block-content-wrapper::before {
-  pointer-events: none;
-  content: "";
-  top: 12px;
-  bottom: 0;
-  left: -15px;
-  position: absolute;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-}
-.ls-block[haschild=true]:focus-within > div > .block-content-wrapper::before {
-  border-color: var(--ls-block-bullet-active-color);
-}
-
-/* Disable for doc mode */
-.doc-mode div.items-center::before,
-.doc-mode div.items-center::after,
-.doc-mode .ls-block::before,
-.doc-mode .ls-block::after {
-  display: none;
-}
-
+/* @import "bullet_threading.scss"; */
 :root {
   --ct-bullet-size: 6px;
   --ct-block-max-width: calc(100% - 38px);
+  --ct-bullet-color: #4d4d4d;
+  --ct-bullet-closed-color: #8e8e8e;
+  --ct-guideline-color: #cacaca;
+  --ct-guideline-size: 1px;
+  --ct-guideline-style: solid;
+  --ls-block-bullet-active-color: var(--ls-link-text-color);
 }
 
 /* block reference */
@@ -559,23 +444,77 @@ a:hover > .bullet-container .bullet {
   opacity: 1;
 }
 
+/* ======================================= */
+/* from bullet_threading.scss              */
+/* remove drifting of blocks               */
+.ls-block div.items-center {
+  position: relative;
+  height: 26px !important;
+}
+
+/* ======================================= */
+/* ======================================= */
+/* from logseq-laurel-theme                */
+/* vertical lines and bullets highlights   */
+.block-children {
+  border-left: var(--ct-guideline-size) var(--ct-guideline-style) var(--ct-guideline-color);
+}
+
+.block-children:focus-within {
+  border-color: var(--ct-page-reference-color);
+}
+
+/*=============================================================================================================================
+==== highlight current path by cannnibalox v0.2 https://discuss.logseq.com/t/css-highlights-current-path-bullets-color/371 ====
+=============================================================================================================================*/
+.ls-block .bullet {
+  background-color: var(--ct-page-reference-color);
+  box-shadow: 0 0 0 2px var(--ct-background), 0 0 0 3px var(--ct-page-reference-color);
+}
+
+.ls-block:not(:focus-within) .bullet {
+  background-color: var(--ct-bullet-color);
+  box-shadow: none;
+}
+
+.block-children-container {
+  position: relative;
+}
+
+.block-children-left-border {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  padding-right: 0px;
+  border-radius: 2px;
+  background-color: transparent;
+  left: -1px;
+  transition: background-color 0.2s;
+}
+
+.block-children-left-border:hover {
+  background-color: var(--ls-block-bullet-active-color);
+}
+
+/* ======================================= */
 .block-control svg {
   color: var(--ct-block-arrow-color);
 }
 
+/* remove the shadow of the block controller */
+/*
 .block-control:hover svg {
   filter: drop-shadow(2px 4px 6px black);
 }
-
+*/
+/* remove the shadow of the block controller */
 .block-control .rotating-arrow {
   display: block;
-  border-radius: 50%;
-  background-color: var(--ls-primary-background-color);
   width: 1rem;
   height: 1rem;
   margin-left: 2px;
   margin-top: 2px;
-  box-shadow: 0 0 4px 2px var(--ls-primary-background-color);
 }
 
 .block-control .rotating-arrow > svg {
@@ -629,11 +568,13 @@ a:hover > .bullet-container .bullet {
   transition: all ease-in 0.3s;
 }
 
+/* remove animation of embedding blocks */
+/*
 :is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px rgba(0, 0, 0);
   transform: translate(-7px, -6px);
 }
-
+*/
 /* page embed */
 .embed-page,
 .cp__right-sidebar .embed-page {
