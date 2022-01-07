@@ -1,9 +1,23 @@
-## [1.23.2](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.1...v1.23.2) (2021-12-31)
+## [1.23.7](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.6...v1.23.7) (2022-01-07)
 
 
 ### Bug Fixes
 
-* some style issues ([0b4d669](https://github.com/zhengyu-yang/logseq-dev-theme/commit/0b4d669335354f4cae699acb6343d0840233e89f))
+* remove the margin of code ([d388875](https://github.com/pengx17/logseq-dev-theme/commit/d38887510c87834ac77e64ed5ad7b5bed513c8d5))
+
+## [1.23.6](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.5...v1.23.6) (2022-01-04)
+
+
+### Bug Fixes
+
+* lower block toggle bar ([5245dbe](https://github.com/pengx17/logseq-dev-theme/commit/5245dbe431d0f96f536c3730ac04c5bd4bf0ba72))
+
+## [1.23.5](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.4...v1.23.5) (2022-01-04)
+
+
+### Bug Fixes
+
+* compatibility issue with other themes ([978ddf7](https://github.com/pengx17/logseq-dev-theme/commit/978ddf7a9d606169446462eb2780c697abc6fe08))
 
 ## [1.23.4](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.3...v1.23.4) (2021-12-31)
 
