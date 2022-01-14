@@ -1,11 +1,37 @@
-## [1.23.3](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.2...v1.23.3) (2022-01-07)
+## [1.23.12](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.11...v1.23.12) (2022-01-12)
 
 
 ### Bug Fixes
 
-* compatibility issue with other themes ([978ddf7](https://github.com/zhengyu-yang/logseq-dev-theme/commit/978ddf7a9d606169446462eb2780c697abc6fe08))
-* lower block toggle bar ([5245dbe](https://github.com/zhengyu-yang/logseq-dev-theme/commit/5245dbe431d0f96f536c3730ac04c5bd4bf0ba72))
-* remove the margin of code ([d388875](https://github.com/zhengyu-yang/logseq-dev-theme/commit/d38887510c87834ac77e64ed5ad7b5bed513c8d5))
+* enlarge page content padding ([936f9b6](https://github.com/pengx17/logseq-dev-theme/commit/936f9b619a3bde4353b443f09a88cf07703905c8))
+
+## [1.23.11](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.10...v1.23.11) (2022-01-11)
+
+
+### Bug Fixes
+
+* left sidebar styles ([bcf387e](https://github.com/pengx17/logseq-dev-theme/commit/bcf387ec62a7bb0491d6d940d03dbf118583b38b))
+
+## [1.23.10](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.9...v1.23.10) (2022-01-11)
+
+
+### Bug Fixes
+
+* padding for page content ([50fc6b9](https://github.com/pengx17/logseq-dev-theme/commit/50fc6b917203c8f06d0dee614473aa5b97d91511))
+
+## [1.23.9](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.8...v1.23.9) (2022-01-11)
+
+
+### Bug Fixes
+
+* for nightly release ([d35209d](https://github.com/pengx17/logseq-dev-theme/commit/d35209d8a7fdfb1d31d66f521d4b2da07e2bbaae))
+
+## [1.23.8](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.7...v1.23.8) (2022-01-11)
+
+
+### Bug Fixes
+
+* adjust for new nightly version ([702afaa](https://github.com/pengx17/logseq-dev-theme/commit/702afaa2367e15eb8862ee81c36c736eea1724a2))
 
 ## [1.23.7](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.6...v1.23.7) (2022-01-07)
 

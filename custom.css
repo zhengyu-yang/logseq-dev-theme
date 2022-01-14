@@ -107,7 +107,6 @@ i {
 }
 
 #main-container {
-  padding-top: var(--ct-header-height);
   position: absolute;
   width: 100%;
 }
@@ -117,7 +116,7 @@ i {
 }
 
 #main-content-container {
-  margin-top: var(--ct-header-height) !important;
+  padding-top: var(--ct-header-height);
 }
 
 .page {
@@ -129,7 +128,7 @@ i {
 }
 
 .cp__sidebar-main-content:not([data-is-global-graph-pages=true]) > div {
-  padding: 16px 32px;
+  padding: 64px 32px;
 }
 
 /* Right side bar */
@@ -207,6 +206,32 @@ i {
   margin-top: 0.5em;
 }
 
+#left-sidebar {
+  height: 100%;
+  padding-top: var(--ct-header-height);
+}
+
+.left-sidebar-inner {
+  height: 100%;
+}
+
+.left-sidebar-inner > .wrap {
+  margin-top: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: calc(100% - var(--ct-header-height));
+}
+
+.left-sidebar-inner a.item > span {
+  transform: translateY(2px);
+  margin-top: 0;
+}
+
+.left-sidebar-inner .new-page {
+  position: absolute;
+  bottom: 0;
+}
+
 .left-sidebar-inner .nav-content-item {
   font-size: 0.875rem;
   font-weight: 500;
@@ -214,7 +239,7 @@ i {
 
 #journals > div > div > div > div.flex.flex-col > div.content {
   position: sticky;
-  top: 50px;
+  top: 40px;
   z-index: 1;
 }
 #journals > div > div > div > div.flex.flex-col > div.content .journal-title > h1 {
@@ -307,11 +332,7 @@ a.title h1.title {
 }
 
 #repo-name {
-  /* Show the last part of the repo instead */
-  direction: rtl;
-  text-align: left;
-  max-width: 120px;
-  line-height: 1.5;
+  max-width: 150px;
 }
 
 .cp__right-sidebar-settings a {
