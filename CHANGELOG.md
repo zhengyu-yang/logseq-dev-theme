@@ -1,3 +1,14 @@
+## [1.23.4](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.3...v1.23.4) (2022-01-14)
+
+
+### Bug Fixes
+
+* adjust for new nightly version ([702afaa](https://github.com/zhengyu-yang/logseq-dev-theme/commit/702afaa2367e15eb8862ee81c36c736eea1724a2))
+* enlarge page content padding ([936f9b6](https://github.com/zhengyu-yang/logseq-dev-theme/commit/936f9b619a3bde4353b443f09a88cf07703905c8))
+* for nightly release ([d35209d](https://github.com/zhengyu-yang/logseq-dev-theme/commit/d35209d8a7fdfb1d31d66f521d4b2da07e2bbaae))
+* left sidebar styles ([bcf387e](https://github.com/zhengyu-yang/logseq-dev-theme/commit/bcf387ec62a7bb0491d6d940d03dbf118583b38b))
+* padding for page content ([50fc6b9](https://github.com/zhengyu-yang/logseq-dev-theme/commit/50fc6b917203c8f06d0dee614473aa5b97d91511))
+
 ## [1.23.12](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.11...v1.23.12) (2022-01-12)
 
 
