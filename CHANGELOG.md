@@ -1,9 +1,16 @@
-## [1.23.6](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.5...v1.23.6) (2022-01-25)
+## [1.23.16](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.15...v1.23.16) (2022-02-17)
 
 
 ### Bug Fixes
 
-* h2 blink issue ([f098307](https://github.com/zhengyu-yang/logseq-dev-theme/commit/f09830753ba347953b2a727a2931a435eeefe07f))
+* remove sticky journal title ([48c6727](https://github.com/pengx17/logseq-dev-theme/commit/48c6727d52c099a5c1bdcaa02301d9e12b67097b))
+
+## [1.23.15](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.14...v1.23.15) (2022-02-17)
+
+
+### Bug Fixes
+
+* texts & todo color in highlighted blocks ([df9fc4d](https://github.com/pengx17/logseq-dev-theme/commit/df9fc4d1e16130cf3dbf21c3fc91cb7835242ac6)), closes [#38](https://github.com/pengx17/logseq-dev-theme/issues/38)
 
 ## [1.23.14](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.13...v1.23.14) (2022-01-18)
 
