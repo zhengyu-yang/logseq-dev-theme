@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.7...v1.24.0) (2022-02-24)
+
+
+### Features
+
+* add no bullet threading dev theme ([6b71900](https://github.com/zhengyu-yang/logseq-dev-theme/commit/6b7190055cd5983ff0ca441a8ca85df80f9b1d40))
+
 # [1.24.0](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.16...v1.24.0) (2022-02-23)
 
 
