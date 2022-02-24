@@ -1,10 +1,9 @@
-## [1.23.7](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.6...v1.23.7) (2022-02-18)
+# [1.24.0](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.16...v1.24.0) (2022-02-23)
 
 
-### Bug Fixes
+### Features
 
-* remove sticky journal title ([48c6727](https://github.com/zhengyu-yang/logseq-dev-theme/commit/48c6727d52c099a5c1bdcaa02301d9e12b67097b))
-* texts & todo color in highlighted blocks ([df9fc4d](https://github.com/zhengyu-yang/logseq-dev-theme/commit/df9fc4d1e16130cf3dbf21c3fc91cb7835242ac6)), closes [#38](https://github.com/zhengyu-yang/logseq-dev-theme/issues/38)
+* add no bullet threading dev theme ([6b71900](https://github.com/pengx17/logseq-dev-theme/commit/6b7190055cd5983ff0ca441a8ca85df80f9b1d40))
 
 ## [1.23.16](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.15...v1.23.16) (2022-02-17)
 
