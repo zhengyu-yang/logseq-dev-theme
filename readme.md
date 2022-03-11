@@ -6,8 +6,7 @@ A theme inspired by Dev.to & Figma.
 
 ## Working Demo
 
-https://knowledge-garden.vercel.app/
-
+https://pengx17.github.io/knowledge-garden/
 
 ## Usage
 
@@ -46,10 +45,6 @@ To change the color and width, set the following variables in `custom.css`:
 #### Caveats
 
 If your theme defines border colors for the `children-block`, the bullet threading css may not work as expected.
-
-#### Why not a standalone plugin?
-
-To make it more accessible & portable for both Web and desktop.
 
 ## Demo (might be outdated)
 
