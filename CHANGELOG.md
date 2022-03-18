@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.24.0...v1.24.1) (2022-03-18)
+
+
+### Bug Fixes
+
+* adjust code block margin ([bce6ea1](https://github.com/zhengyu-yang/logseq-dev-theme/commit/bce6ea147324a244742cf97b5f06c3766e42a8cd))
+
 ## [1.24.1](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.0...v1.24.1) (2022-03-17)
 
 
