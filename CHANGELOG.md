@@ -1,9 +1,9 @@
-# [1.24.0](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.23.7...v1.24.0) (2022-02-24)
+## [1.24.1](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.0...v1.24.1) (2022-03-17)
 
 
-### Features
+### Bug Fixes
 
-* add no bullet threading dev theme ([6b71900](https://github.com/zhengyu-yang/logseq-dev-theme/commit/6b7190055cd5983ff0ca441a8ca85df80f9b1d40))
+* adjust code block margin ([bce6ea1](https://github.com/pengx17/logseq-dev-theme/commit/bce6ea147324a244742cf97b5f06c3766e42a8cd))
 
 # [1.24.0](https://github.com/pengx17/logseq-dev-theme/compare/v1.23.16...v1.24.0) (2022-02-23)
 
