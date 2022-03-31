@@ -1,3 +1,10 @@
+## [1.24.2](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.24.1...v1.24.2) (2022-03-31)
+
+
+### Bug Fixes
+
+* compatibility fix for light/white theme refactor upstream ([14d3194](https://github.com/zhengyu-yang/logseq-dev-theme/commit/14d3194b10a89fdfc10c6e5506ccebe1d713d012))
+
 ## [1.24.2](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.1...v1.24.2) (2022-03-28)
 
 
