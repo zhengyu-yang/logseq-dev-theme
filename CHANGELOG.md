@@ -1,9 +1,9 @@
-## [1.24.2](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.24.1...v1.24.2) (2022-03-31)
+## [1.24.3](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.2...v1.24.3) (2022-04-01)
 
 
 ### Bug Fixes
 
-* compatibility fix for light/white theme refactor upstream ([14d3194](https://github.com/zhengyu-yang/logseq-dev-theme/commit/14d3194b10a89fdfc10c6e5506ccebe1d713d012))
+* threading in the first block of the embedded ([986e791](https://github.com/pengx17/logseq-dev-theme/commit/986e7913b1822aaaf9f3f44c7389758fd6963ee3))
 
 ## [1.24.2](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.1...v1.24.2) (2022-03-28)
 
