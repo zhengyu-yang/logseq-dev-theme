@@ -1,3 +1,17 @@
+# [1.25.0](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.24.3...v1.25.0) (2022-04-18)
+
+
+### Bug Fixes
+
+* first journal item height ([7d40029](https://github.com/zhengyu-yang/logseq-dev-theme/commit/7d40029380ac9c7292570ab31ebe1dd234efd7c7))
+* fix scrollbar issue ([2d48f01](https://github.com/zhengyu-yang/logseq-dev-theme/commit/2d48f0151a097242f0199a37fd9b5aaa13b9ca76))
+* header paddings ([c61d414](https://github.com/zhengyu-yang/logseq-dev-theme/commit/c61d414c707b32f25ce69b8280d4b58f8f23a039))
+
+
+### Features
+
+* adapt mobile styles ([440961c](https://github.com/zhengyu-yang/logseq-dev-theme/commit/440961cc568dc06513d383515784f58cf4216498))
+
 ## [1.25.3](https://github.com/pengx17/logseq-dev-theme/compare/v1.25.2...v1.25.3) (2022-04-18)
 
 
