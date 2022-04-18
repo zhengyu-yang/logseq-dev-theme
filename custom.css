@@ -59,10 +59,6 @@ i {
     font-size: 14px;
   }
 
-  #main-content-container {
-    padding: 0;
-  }
-
   .cp__sidebar-main-content > div {
     padding: 1px 1em 1em 1em !important;
     border: none;
@@ -77,6 +73,18 @@ i {
     padding: 0 1rem;
   }
 }
+/* Fix iphone issues */
+html.is-native-iphone #left-sidebar {
+  top: 0 !important;
+}
+
+/**
+ * Journal page is too long for empty journals
+ */
+#journals .journal-item:first-child {
+  min-height: fit-content;
+}
+
 @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
   .cp__header,
 .cp__right-sidebar-topbar,
@@ -106,7 +114,12 @@ i {
   --ct-sidebar-resizer-background-hover: var(--ct-primary-color);
 }
 
+#left-container {
+  overflow: auto !important;
+}
+
 #main-container {
+  height: auto !important;
   position: absolute;
   width: 100%;
 }
@@ -116,7 +129,7 @@ i {
 }
 
 #main-content-container {
-  padding-top: var(--ct-header-height);
+  padding-top: var(--ct-header-height) !important;
 }
 
 .page {
@@ -247,7 +260,7 @@ i {
   --ct-heading-font-size: 25px;
   --ct-heading-font-weight: 700;
   --ct-heading-font-style: normal;
-  --ct-header-height: 42px;
+  --ct-header-height: calc(var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding));
   --ct-topbar-backdrop: blur(20px);
 }
 
@@ -274,11 +287,6 @@ a.title h1.title {
   font-style: var(--ct-heading-font-style);
   color: var(--ct-heading-color);
   text-shadow: var(--ct-heading-text-shadow, none);
-}
-
-.cp__header,
-.cp__right-sidebar-topbar {
-  height: var(--ct-header-height);
 }
 
 .cp__header::after,
@@ -548,6 +556,14 @@ a.title h1.title {
   font-size: inherit;
   border-bottom-color: var(--ct-primary-color);
   border-bottom-style: dashed;
+}
+
+.block-body {
+  width: 100%;
+}
+
+.block-body .raw_html {
+  max-width: 100%;
 }
 
 .block-ref .block-body {
@@ -956,6 +972,10 @@ progress::-webkit-progress-value {
 
 .extensions__code-lang + div {
   margin-top: 0 !important;
+}
+
+.link_preview__root {
+  max-width: 100%;
 }
 
 /* Popups */

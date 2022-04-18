@@ -1,9 +1,30 @@
-## [1.24.3](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.24.2...v1.24.3) (2022-04-13)
+## [1.25.3](https://github.com/pengx17/logseq-dev-theme/compare/v1.25.2...v1.25.3) (2022-04-18)
 
 
 ### Bug Fixes
 
-* threading in the first block of the embedded ([986e791](https://github.com/zhengyu-yang/logseq-dev-theme/commit/986e7913b1822aaaf9f3f44c7389758fd6963ee3))
+* fix scrollbar issue ([2d48f01](https://github.com/pengx17/logseq-dev-theme/commit/2d48f0151a097242f0199a37fd9b5aaa13b9ca76))
+
+## [1.25.2](https://github.com/pengx17/logseq-dev-theme/compare/v1.25.1...v1.25.2) (2022-04-15)
+
+
+### Bug Fixes
+
+* first journal item height ([7d40029](https://github.com/pengx17/logseq-dev-theme/commit/7d40029380ac9c7292570ab31ebe1dd234efd7c7))
+
+## [1.25.1](https://github.com/pengx17/logseq-dev-theme/compare/v1.25.0...v1.25.1) (2022-04-15)
+
+
+### Bug Fixes
+
+* header paddings ([c61d414](https://github.com/pengx17/logseq-dev-theme/commit/c61d414c707b32f25ce69b8280d4b58f8f23a039))
+
+# [1.25.0](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.3...v1.25.0) (2022-04-15)
+
+
+### Features
+
+* adapt mobile styles ([440961c](https://github.com/pengx17/logseq-dev-theme/commit/440961cc568dc06513d383515784f58cf4216498))
 
 ## [1.24.3](https://github.com/pengx17/logseq-dev-theme/compare/v1.24.2...v1.24.3) (2022-04-01)
 
