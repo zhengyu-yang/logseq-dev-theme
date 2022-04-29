@@ -85,20 +85,21 @@ html.is-native-iphone #left-sidebar {
   min-height: fit-content;
 }
 
+.cp__header,
+.cp__right-sidebar-topbar {
+  background: var(--ct-header-bg-color);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .sidebar-item.content > div > div:first-of-type {
+    background: var(--ct-header-bg-color);
+  }
+}
 @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-  .cp__header,
-.cp__right-sidebar-topbar,
-.sidebar-item.content > div > div:first-of-type {
+  .sidebar-item.content > div > div:first-of-type {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     background-color: transparent;
-  }
-}
-@supports not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
-  .cp__header,
-.cp__right-sidebar-topbar,
-.sidebar-item.content > div > div:first-of-type {
-    background: var(--ct-header-bg-color);
   }
 }
 :not(.color-level) .color-level {
@@ -114,34 +115,12 @@ html.is-native-iphone #left-sidebar {
   --ct-sidebar-resizer-background-hover: var(--ct-primary-color);
 }
 
-#left-container {
-  overflow: auto !important;
-}
-
-#main-container {
-  height: auto !important;
-  position: absolute;
-  width: 100%;
-}
-
 .theme-inner {
   background: var(--ls-primary-background-color);
 }
 
-#main-content-container {
-  padding-top: var(--ct-header-height) !important;
-}
-
 .page {
   margin-top: 0;
-}
-
-.cp__sidebar-main-content {
-  width: 100%;
-}
-
-.cp__sidebar-main-content:not([data-is-global-graph-pages=true]) > div {
-  padding: 64px 32px;
 }
 
 /* Right side bar */
@@ -302,14 +281,6 @@ a.title h1.title {
   content: "";
 }
 
-.cp__header #search-field {
-  height: 28px;
-  padding: 0;
-  font-size: 12px;
-  background: transparent;
-  color: var(--ls-search-icon-color, #9fa6b2);
-}
-
 .cp__header.electron-mac {
   height: var(--ct-header-height);
 }
@@ -405,7 +376,10 @@ a.title h1.title {
 }
 
 :root {
-  --ls-block-bullet-active-color: var(--ls-link-text-color);
+  --ls-block-bullet-active-color: var(
+    --ls-block-bullet-threading-active-color-overwrite,
+    var(--ls-link-text-color)
+  );
   --ls-block-bullet-threading-width: var(
     --ls-block-bullet-threading-width-overwrite,
     1px
@@ -443,6 +417,14 @@ a.title h1.title {
 
 .block-content-wrapper {
   position: relative;
+  overflow-x: visible !important;
+  /* Fixme: overflow? */
+}
+
+.block-content-wrapper > div:first-child {
+  padding: 1px;
+  margin: -1px;
+  overflow-x: auto;
 }
 
 .bullet-container {
@@ -538,16 +520,13 @@ a.title h1.title {
   display: none;
 }
 
-/* @import "bullet_threading.scss"; */
+.doc-mode .block-children {
+  border-left-width: 0px !important;
+}
+
 :root {
   --ct-bullet-size: 6px;
   --ct-block-max-width: calc(100% - 38px);
-  --ct-bullet-color: #4d4d4d;
-  --ct-bullet-closed-color: #8e8e8e;
-  --ct-guideline-color: #cacaca;
-  --ct-guideline-size: 1px;
-  --ct-guideline-style: solid;
-  --ls-block-bullet-active-color: var(--ls-link-text-color);
 }
 
 /* block reference */
@@ -604,81 +583,32 @@ a:hover > .bullet-container .bullet {
   opacity: 1;
 }
 
-/* ======================================= */
-/* from bullet_threading.scss              */
-/* remove drifting of blocks               */
-.ls-block div.items-center {
-  position: relative;
-  height: 26px !important;
-}
-
-/* ======================================= */
-/* ======================================= */
-/* from logseq-laurel-theme                */
-/* vertical lines and bullets highlights   */
-.block-children {
-  border-left: var(--ct-guideline-size) var(--ct-guideline-style) var(--ct-guideline-color);
-}
-
-.block-children:focus-within {
-  border-color: var(--ct-page-reference-color);
-}
-
-/*=============================================================================================================================
-==== highlight current path by cannnibalox v0.2 https://discuss.logseq.com/t/css-highlights-current-path-bullets-color/371 ====
-=============================================================================================================================*/
-.ls-block .bullet {
-  background-color: var(--ct-page-reference-color);
-  box-shadow: 0 0 0 2px var(--ct-background), 0 0 0 3px var(--ct-page-reference-color);
-}
-
-.ls-block:not(:focus-within) .bullet {
-  background-color: var(--ct-bullet-color);
-  box-shadow: none;
-}
-
-.block-children-container {
-  position: relative;
-}
-
-.block-children-left-border {
-  z-index: 10;
-  position: absolute;
-  height: 100%;
-  width: 4px;
-  padding-right: 0px;
-  border-radius: 2px;
-  background-color: transparent;
-  left: -1px;
-  transition: background-color 0.2s;
-}
-
-.block-children-left-border:hover {
-  background-color: var(--ls-block-bullet-active-color);
-}
-
-/* ======================================= */
 .block-control svg {
   color: var(--ct-block-arrow-color);
 }
 
-/* remove the shadow of the block controller */
-/*
 .block-control:hover svg {
   filter: drop-shadow(2px 4px 6px black);
 }
-*/
-/* remove the shadow of the block controller */
+
 .block-control .rotating-arrow {
   display: block;
+  border-radius: 50%;
+  background-color: var(--ls-primary-background-color);
   width: 1rem;
   height: 1rem;
   margin-left: 2px;
   margin-top: 2px;
+  box-shadow: 0 0 4px 2px var(--ls-primary-background-color);
 }
 
 .block-control .rotating-arrow > svg {
   margin-left: 0 !important;
+}
+
+.ls-block div.items-center {
+  position: relative;
+  height: 26px !important;
 }
 
 .block-content-wrapper > div > .block-content > span > span > :first-child {
@@ -728,13 +658,11 @@ a:hover > .bullet-container .bullet {
   transition: all ease-in 0.3s;
 }
 
-/* remove animation of embedding blocks */
-/*
 :is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
-  box-shadow: 8px 8px rgba(0, 0, 0);
+  box-shadow: 8px 8px black;
   transform: translate(-7px, -6px);
 }
-*/
+
 /* page embed */
 .embed-page,
 .cp__right-sidebar .embed-page {
@@ -978,6 +906,10 @@ progress::-webkit-progress-value {
   max-width: 100%;
 }
 
+.rc-datepicker {
+  color: #333;
+}
+
 /* Popups */
 .tippy-tooltip {
   padding: 0.5em 0;
@@ -1071,6 +1003,7 @@ progress::-webkit-progress-value {
   background-color: var(--color-level-1);
   border-radius: 8px;
   padding: 1rem 1.5rem;
+  margin: 2px;
   position: relative;
 }
 
@@ -1275,7 +1208,6 @@ html[data-theme=dark] {
   --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
-  /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
   --ls-selection-color: #000;
   --ls-block-highlight-color: #32445a;
@@ -1326,7 +1258,6 @@ html[data-theme=white] {
   --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-selection-color: #fff;
-  /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
 }
 

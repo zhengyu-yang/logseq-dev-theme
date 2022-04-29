@@ -1,5 +1,8 @@
 :root {
-  --ls-block-bullet-active-color: var(--ls-link-text-color);
+  --ls-block-bullet-active-color: var(
+    --ls-block-bullet-threading-active-color-overwrite,
+    var(--ls-link-text-color)
+  );
   --ls-block-bullet-threading-width: var(
     --ls-block-bullet-threading-width-overwrite,
     1px
@@ -37,6 +40,14 @@
 
 .block-content-wrapper {
   position: relative;
+  overflow-x: visible !important;
+  /* Fixme: overflow? */
+}
+
+.block-content-wrapper > div:first-child {
+  padding: 1px;
+  margin: -1px;
+  overflow-x: auto;
 }
 
 .bullet-container {
@@ -130,4 +141,8 @@
 .doc-mode .ls-block::before,
 .doc-mode .ls-block::after {
   display: none;
+}
+
+.doc-mode .block-children {
+  border-left-width: 0px !important;
 }
