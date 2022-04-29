@@ -524,9 +524,16 @@ a.title h1.title {
   border-left-width: 0px !important;
 }
 
+/* @import "bullet_threading.scss"; */
 :root {
   --ct-bullet-size: 6px;
   --ct-block-max-width: calc(100% - 38px);
+  --ct-bullet-color: #4d4d4d;
+  --ct-bullet-closed-color: #8e8e8e;
+  --ct-guideline-color: #cacaca;
+  --ct-guideline-size: 1px;
+  --ct-guideline-style: solid;
+  --ls-block-bullet-active-color: var(--ls-link-text-color);
 }
 
 /* block reference */
@@ -583,32 +590,81 @@ a:hover > .bullet-container .bullet {
   opacity: 1;
 }
 
+/* ======================================= */
+/* from bullet_threading.scss              */
+/* remove drifting of blocks               */
+.ls-block div.items-center {
+  position: relative;
+  height: 26px !important;
+}
+
+/* ======================================= */
+/* ======================================= */
+/* from logseq-laurel-theme                */
+/* vertical lines and bullets highlights   */
+.block-children {
+  border-left: var(--ct-guideline-size) var(--ct-guideline-style) var(--ct-guideline-color);
+}
+
+.block-children:focus-within {
+  border-color: var(--ct-page-reference-color);
+}
+
+/*=============================================================================================================================
+==== highlight current path by cannnibalox v0.2 https://discuss.logseq.com/t/css-highlights-current-path-bullets-color/371 ====
+=============================================================================================================================*/
+.ls-block .bullet {
+  background-color: var(--ct-page-reference-color);
+  box-shadow: 0 0 0 2px var(--ct-background), 0 0 0 3px var(--ct-page-reference-color);
+}
+
+.ls-block:not(:focus-within) .bullet {
+  background-color: var(--ct-bullet-color);
+  box-shadow: none;
+}
+
+.block-children-container {
+  position: relative;
+}
+
+.block-children-left-border {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  padding-right: 0px;
+  border-radius: 2px;
+  background-color: transparent;
+  left: -1px;
+  transition: background-color 0.2s;
+}
+
+.block-children-left-border:hover {
+  background-color: var(--ls-block-bullet-active-color);
+}
+
+/* ======================================= */
 .block-control svg {
   color: var(--ct-block-arrow-color);
 }
 
+/* remove the shadow of the block controller */
+/*
 .block-control:hover svg {
   filter: drop-shadow(2px 4px 6px black);
 }
-
+*/
+/* remove the shadow of the block controller */
 .block-control .rotating-arrow {
   display: block;
-  border-radius: 50%;
-  background-color: var(--ls-primary-background-color);
   width: 1rem;
   height: 1rem;
   margin-left: 2px;
   margin-top: 2px;
-  box-shadow: 0 0 4px 2px var(--ls-primary-background-color);
 }
 
 .block-control .rotating-arrow > svg {
   margin-left: 0 !important;
-}
-
-.ls-block div.items-center {
-  position: relative;
-  height: 26px !important;
 }
 
 .block-content-wrapper > div > .block-content > span > span > :first-child {
@@ -658,11 +714,13 @@ a:hover > .bullet-container .bullet {
   transition: all ease-in 0.3s;
 }
 
+/* remove animation of embedding blocks */
+/*
 :is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px rgba(0, 0, 0);
   transform: translate(-7px, -6px);
 }
-
+*/
 /* page embed */
 .embed-page,
 .cp__right-sidebar .embed-page {

@@ -1,3 +1,27 @@
+# [1.26.0](https://github.com/zhengyu-yang/logseq-dev-theme/compare/v1.25.0...v1.26.0) (2022-04-29)
+
+
+### Bug Fixes
+
+* #main-container min height ([4623f47](https://github.com/zhengyu-yang/logseq-dev-theme/commit/4623f4781778de591154e7c1028188baa1d86814))
+* block content sometimes overflow ([61ee122](https://github.com/zhengyu-yang/logseq-dev-theme/commit/61ee1222515088a95d503aa478bb17e79aec14fd))
+* build is missing no_bullet_threading.css ([5b4a2b1](https://github.com/zhengyu-yang/logseq-dev-theme/commit/5b4a2b15db66edee5d9816a190d68d444f0978b9))
+* dates in date picker is not visible ([6cede63](https://github.com/zhengyu-yang/logseq-dev-theme/commit/6cede636f8b3ee42e649b4439a95dc456af75c94)), closes [#50](https://github.com/zhengyu-yang/logseq-dev-theme/issues/50)
+* default active threading color ([2aa32d1](https://github.com/zhengyu-yang/logseq-dev-theme/commit/2aa32d16b4330e77966b9a8350b013f04b200126))
+* edit layout shift issue ([8926098](https://github.com/zhengyu-yang/logseq-dev-theme/commit/89260981146c545c25dab5d38e98367c1d87dfe1))
+* fix previous not properly ([a12e47e](https://github.com/zhengyu-yang/logseq-dev-theme/commit/a12e47e3f66f5a8ba94ad7e7f2415042147584ea))
+* journal load issue ([20498fd](https://github.com/zhengyu-yang/logseq-dev-theme/commit/20498fdda9a651dfca535ac172f1fd2b3d864f78))
+* multiline threading sometimes got covered ([4c8067c](https://github.com/zhengyu-yang/logseq-dev-theme/commit/4c8067c7ed88dd18234dae9ef9841bfef625fa24))
+* query border is not shown ([b5b61e4](https://github.com/zhengyu-yang/logseq-dev-theme/commit/b5b61e4d8e9d7166da90be6069dffc47ebb0d24a))
+* remove backdrop-filter for headers ([45788a6](https://github.com/zhengyu-yang/logseq-dev-theme/commit/45788a6f9b87655eefba60f7635d115f84c4ce3c))
+* remove large padding ([326d306](https://github.com/zhengyu-yang/logseq-dev-theme/commit/326d306ed1361b306895a2b44803893ce88b0931))
+* solid left border in doc mod ([c94113b](https://github.com/zhengyu-yang/logseq-dev-theme/commit/c94113bd8acb6ff9443e53a6cbdf301bba036722))
+
+
+### Features
+
+* allow users to overwrite the threading color in plugin ([218a1d8](https://github.com/zhengyu-yang/logseq-dev-theme/commit/218a1d86d8bdde7e7d865ba28d7346e13228abec))
+
 ## [1.26.1](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.0...v1.26.1) (2022-04-27)
 
 
