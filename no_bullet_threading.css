@@ -59,10 +59,6 @@ i {
     font-size: 14px;
   }
 
-  #main-content-container {
-    padding: 0;
-  }
-
   .cp__sidebar-main-content > div {
     padding: 1px 1em 1em 1em !important;
     border: none;
@@ -77,20 +73,33 @@ i {
     padding: 0 1rem;
   }
 }
+/* Fix iphone issues */
+html.is-native-iphone #left-sidebar {
+  top: 0 !important;
+}
+
+/**
+ * Journal page is too long for empty journals
+ */
+#journals .journal-item:first-child {
+  min-height: fit-content;
+}
+
+.cp__header,
+.cp__right-sidebar-topbar {
+  background: var(--ct-header-bg-color);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .sidebar-item.content > div > div:first-of-type {
+    background: var(--ct-header-bg-color);
+  }
+}
 @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-  .cp__header,
-.cp__right-sidebar-topbar,
-.sidebar-item.content > div > div:first-of-type {
+  .sidebar-item.content > div > div:first-of-type {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     background-color: transparent;
-  }
-}
-@supports not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
-  .cp__header,
-.cp__right-sidebar-topbar,
-.sidebar-item.content > div > div:first-of-type {
-    background: var(--ct-header-bg-color);
   }
 }
 :not(.color-level) .color-level {
@@ -106,29 +115,12 @@ i {
   --ct-sidebar-resizer-background-hover: var(--ct-primary-color);
 }
 
-#main-container {
-  position: absolute;
-  width: 100%;
-}
-
 .theme-inner {
   background: var(--ls-primary-background-color);
 }
 
-#main-content-container {
-  padding-top: var(--ct-header-height);
-}
-
 .page {
   margin-top: 0;
-}
-
-.cp__sidebar-main-content {
-  width: 100%;
-}
-
-.cp__sidebar-main-content:not([data-is-global-graph-pages=true]) > div {
-  padding: 64px 32px;
 }
 
 /* Right side bar */
@@ -247,7 +239,7 @@ i {
   --ct-heading-font-size: 25px;
   --ct-heading-font-weight: 700;
   --ct-heading-font-style: normal;
-  --ct-header-height: 42px;
+  --ct-header-height: calc(var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding));
   --ct-topbar-backdrop: blur(20px);
 }
 
@@ -276,11 +268,6 @@ a.title h1.title {
   text-shadow: var(--ct-heading-text-shadow, none);
 }
 
-.cp__header,
-.cp__right-sidebar-topbar {
-  height: var(--ct-header-height);
-}
-
 .cp__header::after,
 .cp__right-sidebar-topbar::after {
   left: 0;
@@ -292,14 +279,6 @@ a.title h1.title {
   background-color: rgba(0, 0, 0, 0.16);
   display: block;
   content: "";
-}
-
-.cp__header #search-field {
-  height: 28px;
-  padding: 0;
-  font-size: 12px;
-  background: transparent;
-  color: var(--ls-search-icon-color, #9fa6b2);
 }
 
 .cp__header.electron-mac {
@@ -414,6 +393,14 @@ a.title h1.title {
   font-size: inherit;
   border-bottom-color: var(--ct-primary-color);
   border-bottom-style: dashed;
+}
+
+.block-body {
+  width: 100%;
+}
+
+.block-body .raw_html {
+  max-width: 100%;
 }
 
 .block-ref .block-body {
@@ -801,8 +788,8 @@ progress::-webkit-progress-value {
   background: var(--color-level-4) !important;
 }
 
-.extensions__code > .CodeMirror {
-  padding-top: 0;
+.extensions__code {
+  margin-top: 8px;
 }
 
 .extensions__code-calc {
@@ -818,6 +805,18 @@ progress::-webkit-progress-value {
   margin-left: 4px;
   height: 26px;
   border-radius: 4px;
+}
+
+.extensions__code-lang + div {
+  margin-top: 0 !important;
+}
+
+.link_preview__root {
+  max-width: 100%;
+}
+
+.rc-datepicker {
+  color: #333;
 }
 
 /* Popups */
@@ -913,6 +912,7 @@ progress::-webkit-progress-value {
   background-color: var(--color-level-1);
   border-radius: 8px;
   padding: 1rem 1.5rem;
+  margin: 2px;
   position: relative;
 }
 
@@ -1117,7 +1117,6 @@ html[data-theme=dark] {
   --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
-  /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
   --ls-selection-color: #000;
   --ls-block-highlight-color: #32445a;
@@ -1128,7 +1127,9 @@ html[data-theme=dark] {
 }
 
 .white-theme,
-html[data-theme=light] {
+.light-theme,
+html[data-theme=light],
+html[data-theme=white] {
   --ct-primary-color: #106ba3;
   --ct-secondary-color: #004174;
   --ct-warning-color: #ff7262;
@@ -1166,6 +1167,5 @@ html[data-theme=light] {
   --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-selection-color: #fff;
-  /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
 }
