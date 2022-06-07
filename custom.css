@@ -873,7 +873,7 @@ a.tag:hover {
 /* Page properties */
 .page-properties,
 .block-properties {
-  margin: 0 0 0.5em -8px;
+  margin: 0 0 0.5em;
   font-size: 0.8em;
   background: var(--ls-secondary-background-color);
   width: fit-content;
@@ -962,6 +962,10 @@ progress::-webkit-progress-value {
 
 .link_preview__root {
   max-width: 100%;
+}
+
+.page-icon {
+  font-family: "Inter", sans-serif;
 }
 
 /* Popups */
@@ -1076,6 +1080,7 @@ progress::-webkit-progress-value {
   font-size: var(--ct-inline-code-font-size);
   font-style: var(--ct-inline-code-font-style) !important;
   border-radius: var(--ct-inline-code-border-radius);
+  width: auto;
 }
 
 :not(.dsl-query) > .custom-query .custom-query-title > .flex-row {
@@ -1095,6 +1100,10 @@ progress::-webkit-progress-value {
 
 .block-body > .custom-query .foldable-title .opacity-70 > * {
   color: var(--ct-query-header-color);
+}
+
+.custom-query-title > .svg-small {
+  display: none;
 }
 
 :root {
@@ -1229,7 +1238,7 @@ html[data-theme=dark] {
   --ct-secondary-color: #6096ba;
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
-  --ct-highlight-color: #ffc600;
+  --ct-highlight-color: #d3a400;
   --color-level-1: #313942;
   --color-level-2: #38434c;
   --color-level-3: #404b55;

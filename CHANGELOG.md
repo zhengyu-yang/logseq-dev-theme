@@ -1,3 +1,17 @@
+## [1.26.9](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.8...v1.26.9) (2022-06-06)
+
+
+### Bug Fixes
+
+* some color fixes ([2b99bad](https://github.com/pengx17/logseq-dev-theme/commit/2b99bad9f054185af17d5fa2328f548c83bc2b13))
+
+## [1.26.8](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.7...v1.26.8) (2022-06-05)
+
+
+### Bug Fixes
+
+* query header display issue ([1244cdf](https://github.com/pengx17/logseq-dev-theme/commit/1244cdfd196aebfbaf95ade6ec3cbb61b13a3e96))
+
 ## [1.26.7](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.6...v1.26.7) (2022-05-20)
 
 
