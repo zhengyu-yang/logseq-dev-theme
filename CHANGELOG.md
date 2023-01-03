@@ -1,3 +1,17 @@
+## [1.26.15](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.14...v1.26.15) (2022-12-14)
+
+
+### Bug Fixes
+
+* **scheduled:** add space between content, time cost and scheduled date when references ([52a9a15](https://github.com/pengx17/logseq-dev-theme/commit/52a9a15e9085664788a219822a58b64956f9c857))
+
+## [1.26.14](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.13...v1.26.14) (2022-12-14)
+
+
+### Bug Fixes
+
+* **blocks:** code block references are not displayed properly ([4c62445](https://github.com/pengx17/logseq-dev-theme/commit/4c62445b03ee0e2e84b4c6d3d640cb953695a37d))
+
 ## [1.26.13](https://github.com/pengx17/logseq-dev-theme/compare/v1.26.12...v1.26.13) (2022-11-07)
 
 
