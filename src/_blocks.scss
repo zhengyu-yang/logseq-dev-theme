@@ -72,10 +72,11 @@ a:hover > .bullet-container .bullet {
 /* ======================================= */
 /* from bullet_threading.scss              */
 /* remove drifting of blocks               */
-.ls-block div.items-center {
-  position: relative;
-  height: 26px !important;
-}
+// Causing Zotero search modal to overflow
+// .ls-block div.items-center {
+//   position: relative;
+//   height: 26px !important;
+// }
 /* ======================================= */
 
 /* ======================================= */

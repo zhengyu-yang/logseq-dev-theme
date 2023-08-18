@@ -584,11 +584,6 @@ a:hover > .bullet-container .bullet {
 /* ======================================= */
 /* from bullet_threading.scss              */
 /* remove drifting of blocks               */
-.ls-block div.items-center {
-  position: relative;
-  height: 26px !important;
-}
-
 /* ======================================= */
 /* ======================================= */
 /* from logseq-laurel-theme                */
